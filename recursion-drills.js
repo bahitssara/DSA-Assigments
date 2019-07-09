@@ -2,8 +2,11 @@
 // ? I'm not sure what they are asking of in this 
 const sheepCount = function(sheep) {
     //base case
-    if (sheep.length === 1) {
-        return sheep[0];
+    if (sheep === 0) {
+        return 0;
+    }
+    else {
+        return sheepCount(sheep + n)
     }
     //General case 
     return sheep[0] + sheepCount(sheep.slice(1))
