@@ -86,7 +86,7 @@ class Array {
     }
 }
 
-//2. Explore the push() method
+//2. Explore the push() method 3. Exploring the pop() method
 function main(){
 
     Array.SIZE_RATIO = 3;
@@ -100,7 +100,22 @@ function main(){
     arr.push(19);
     arr.push(45);
     arr.push(10);
-
+// What is the length, capacity and memory address of your array? Explain the result of your program after adding the new lines of code.
+    arr.pop();
+    arr.pop();
+    arr.pop();
+//What is the length, capacity, and address of your array? Explain the result of your program after adding the new lines of code.
     console.log(arr);
 }
+
+//3.Understanding more about how arrays work
+// Print the 1st item in the array arr.
+
+// Empty the array and add just 1 item: arr.push("tauhida");
+
+// Print this 1 item that you just added. What is the result? Can you explain your result?
+
+// What is the purpose of the _resize() function in your Array class?
+
+
 
