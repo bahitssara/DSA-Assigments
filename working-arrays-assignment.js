@@ -1,9 +1,11 @@
-import memory from './memory'
+const memory = require('./memory')
 
+//1. Implement an Array class from scratch.
 class Array {
     //initialize the class
     constructor() {
         this.length = 0;
+        this._capacity = 0;
         this.ptr = memory.allocate(this.length)
     }
     //push values into your array
@@ -84,4 +86,21 @@ class Array {
     }
 }
 
-Array.SIZE_RATIO = 6;
+//2. Explore the push() method
+function main(){
+
+    Array.SIZE_RATIO = 3;
+
+    // Create an instance of the Array class
+    let arr = new Array();
+
+    // Add an item to the array
+    arr.push(3);
+    arr.push(15);
+    arr.push(19);
+    arr.push(45);
+    arr.push(10);
+
+    console.log(arr);
+}
+
