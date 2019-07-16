@@ -101,5 +101,4 @@ function main() {
 
 //Last assignments how to ?
 
-
-console.log(main())
+print(SLL)
