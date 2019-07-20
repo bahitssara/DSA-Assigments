@@ -38,27 +38,31 @@ class starTrek {
         }
         return node.value
     }
-    peek() {
-        //implement peak
-    }
+}
 
-    display() {
-        //to display the stack, what is the first item in the stack
-    }
+function peek(arr) {
+  if(arr.length > 0) {
+      return arr[arr.length-1];
+  }      
+  return undefined
+}
 
-    isEmpty() {
-        //to check if the stack is empty or not
-    }
+function display() {
+    //to display the stack, what is the first item in the stack
+}
+
+function isEmpty() {
+    //to check if the stack is empty or not
 }
 
 function main() {
     let queue = new starTrek();
 
-    // queue.enqueue('Kirk')
-    // queue.enqueue('Spock')
-    // queue.enqueue('McCoy')
-    // queue.enqueue('Scotty') 
-    queue.isEmpty() 
+    queue.enqueue('Kirk')
+    queue.enqueue('Spock')
+    queue.enqueue('McCoy')
+    queue.enqueue('Scotty') 
+    // queue.isEmpty() 
     console.log(queue)
 }
 
@@ -72,8 +76,8 @@ function sortStack() {
 }
 
 // True, true, true, false
-console.log(is_palindrome("dad"));
-console.log(is_palindrome("A man, a plan, a canal: Panama"));
-console.log(is_palindrome("1001"));
-console.log(is_palindrome("Tauhida"));
+// console.log(is_palindrome("dad"));
+// console.log(is_palindrome("A man, a plan, a canal: Panama"));
+// console.log(is_palindrome("1001"));
+// console.log(is_palindrome("Tauhida"));
 console.log(main())

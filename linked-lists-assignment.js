@@ -10,14 +10,8 @@ class LinkedList {
         this.head = null;
     }
 
-    insert(item) {
-        // let newNode = this.head
-        this.next = new _Node(item, this.next)
-        console.log('item', item)
-    }
     insertFirst(item) {
         this.head = new _Node(item, this.head)
-        console.log('item', item)
 
     }
     insertLast(item) {
@@ -31,14 +25,6 @@ class LinkedList {
             }
             tempNode.next = new _Node(item, null);
         }
-        console.log('item', item)
-    }
-
-    insertBefore(item, ptr) {
-        //work on implementing this code
-    }
-    insertAfter(item, ptr) {
-        //work on implementing this code
     }
 
     find(item) {
@@ -81,24 +67,90 @@ class LinkedList {
         }
         previousNode.next = currNode.next;
     }
+
+    insertBefore(item, ptr) {
+        //work on implementing this code
+    }
+    insertAfter(item, ptr) {
+        //work on implementing this code
+    }
+    isEmpty() {
+        return this.head === null;
+    }
+
+    display() {
+        let output = '[';
+        let current = this.head
+        while(current !== null) {
+            output += current.value;
+            if(current.next !== null) {
+                output += ',';
+            }
+            current = current.next
+        }
+        output += ']';
+        return output;
+    }
+    size() {
+        let current = this.head;
+        let count = 0;
+        while (curent !== null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+    findPrevious() {
+        //code
+    }
+    findLast() {
+        //code
+    }
+
 }
 
+//Mystery program 
+function WhatDoesThisProgramDo(lst) {
+    //determines if the node after the current node is equal in value to the node after it? I believe this would be O(n)
+    let current = lst.head;
+    while (current !== null) {
+        let newNode = current;
+        while (newNode.next !== null) {
+            if (newNode.next.value === current.value) {
+                newNode.next = newNode.next.next;
+            }
+            else {
+                newNode = newNode.next;
+            }
+        }
+        current = current.next;
+    }
+}
+
+function thirdFromEnd() {
+    // I'm thinking we need to set up a less than to the value of 3 indexes before the end of the linked list? 
+}
+
+function middleOfAList() {
+    //I would set up a count, and then cut that in half and print the value? or are we wanting to print the value of the index that is halfway?
+    
+}
 
 function main() {
 //look into how to actually just insert so that the lsit is complete. 
     let SLL = new LinkedList();
 
-    SLL.insertFirst('Apollo')
-    SLL.insert('Helo')
-    SLL.insert('Husker')
-    SLL.insert('Starbuck')
+    SLL.insertLast('Apollo')
+    SLL.insertLast('Helo')
+    SLL.insertFirst('Husker')
+    SLL.insertFirst('Starbuck')
     SLL.insertLast('Boomer')
-    // SLL.insertLast('Tauhida')
-    // SLL.remove('Helo')
+    SLL.insertLast('Tauhida')
+    SLL.remove('Helo')
 
     console.log(SLL)
+    console.log(SSL.display())
 }
 
 //Last assignments how to ?
-
-print(SLL)
+main()

@@ -194,5 +194,40 @@ function combineSort(arr1, arr2) {
 }
 console.log( combineSort( [ 1, 3, 6, 8, 11 ], [ 2, 3, 5, 8, 9, 10 ] ) )
 
+//9. Remove characters 
+function removeCharacters(string, charRemove) {
+    let newString = ''
+    for(let i = 0; i < string.length; i++) {
+        let isVowel = false;
+        for(let j = 0; j < charRemove.length; j++) {
+            if(string[i] === charRemove[j]) {
+                isVowel = true
+            }
+        }
+        if(!isVowel) {
+            newString += string[i]
+        }
+    }
+    return newString
+}
+console.log(removeCharacters('My name is sara', 'a e i ou'))
 
+
+//10. Products
+function products(array) {
+    let newArray = [];
+    for(let i = 0; i < array.length; i++) {
+        let num1 = array[i];
+        let product = 1
+        for(let j = 0; j < array.length; j++) {
+            if(array[j] != num1) {
+                product *= array[j]
+            }
+        }
+        newArray.push(product)
+    }
+    return newArray
+}
+
+console.log(products([1,3,9,4]))
 
