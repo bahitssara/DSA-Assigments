@@ -79,6 +79,8 @@ class HashMap {
         }
     }
 
+    
+
     static _hashString(string) {
         let hash = 5381;
         for (let i = 0; i < string.length; i++) {
